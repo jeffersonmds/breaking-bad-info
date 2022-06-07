@@ -1,6 +1,16 @@
 <app-section-title title="Characters" icon="fa-solid fa-people-group"></app-section-title>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Telephone</mat-label>
+    <span matPrefix>+1 &nbsp;</span>
+    <input type="tel" matInput placeholder="555-555-1234">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field>
+</form>
+
 <div class="row">
-  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let character of charactersDatasource">
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12" *ngFor="let character of datasource">
     <app-character-card [character]="character"></app-character-card>
   </div>
 </div>

@@ -2,28 +2,18 @@ import { Character } from './../../models/character.model';
 import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { CharactersService } from 'src/app/services/characters.service';
+import { ActivatedRoute } from '@angular/router';
+import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.scss']
 })
-export class CharactersComponent implements OnInit {
-  charactersDatasource!: Character[];
-  unsub$ = new Subject();
+export class CharactersComponent extends BaseListComponent<Character, CharactersService> implements OnInit {
 
-  constructor(private _charactersService: CharactersService) { }
-
-  ngOnInit(): void {
-    this.getCharacters();
-  }
-
-  getCharacters() {
-    this._charactersService.getAll()
-      .pipe(takeUntil(this.unsub$))
-      .subscribe(characters => {
-        this.charactersDatasource = characters;
-        console.log(this.charactersDatasource);
-      });
+  constructor(_charactersService: CharactersService,
+              _activatedRoute: ActivatedRoute) {
+    super(_charactersService, _activatedRoute);
   }
 }

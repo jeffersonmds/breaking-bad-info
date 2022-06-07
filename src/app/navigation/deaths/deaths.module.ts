@@ -1,12 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DeathsGetAllResolver } from 'src/app/resolvers/deaths.resolver';
 import { DeathsService } from 'src/app/services/deaths.service';
-import { SectionTitleModule } from 'src/app/shared/components/section-title/section-title.module';
+import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 
-import { DeathsComponent } from './deaths.component';
 import { DeathCardComponent } from './death-card/death-card.component';
-import { MatCardModule } from '@angular/material/card';
+import { DeathsComponent } from './deaths.component';
 
 const routes: Routes = [
   {
@@ -15,9 +14,9 @@ const routes: Routes = [
       {
         path: '',
         component: DeathsComponent,
-        // resolve: {
-        //   DataSourceResolver: AircraftTypeGetAllResolver
-        // }
+        resolve: {
+          DatasourceResolver: DeathsGetAllResolver
+        }
       },
     ]
   }
@@ -30,12 +29,11 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
-    SectionTitleModule,
-    MatCardModule
+    BaseListModule
   ],
   providers: [
-    DeathsService
+    DeathsService,
+    DeathsGetAllResolver
   ]
 })
 export class DeathsModule { }

@@ -1,29 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { Episode } from 'src/app/models/episode.model';
 import { EpisodesService } from 'src/app/services/episodes.service';
+import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
 
 @Component({
   selector: 'app-episodes',
   templateUrl: './episodes.component.html',
   styleUrls: ['./episodes.component.scss']
 })
-export class EpisodesComponent implements OnInit {
-  episodesDatasource!: Episode[];
-  unsub$ = new Subject();
+export class EpisodesComponent extends BaseListComponent<Episode, EpisodesService> implements OnInit {
 
-  constructor(private _episodesService: EpisodesService) { }
-
-  ngOnInit(): void {
-    this.getEpisodes();
-  }
-
-  getEpisodes() {
-    this._episodesService.getAll()
-      .pipe(takeUntil(this.unsub$))
-      .subscribe(episodes => {
-        this.episodesDatasource = episodes;
-        console.log(this.episodesDatasource);
-      });
+  constructor(_episodesService: EpisodesService,
+              _activatedRoute: ActivatedRoute) {
+    super(_episodesService, _activatedRoute);
   }
 }

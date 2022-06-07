@@ -27,7 +27,7 @@ export class NavigationComponent implements AfterViewInit {
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
     if (this.sidenav) {
-      if (width > 800) {
+      if (width > 900) {
         this.sidenav.mode = 'side';
         this.sidenav.open();
       } else {

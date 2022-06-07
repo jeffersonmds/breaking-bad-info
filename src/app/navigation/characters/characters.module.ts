@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
+import { CharactersGetAllResolver } from 'src/app/resolvers/characters.resolver';
 import { CharactersService } from 'src/app/services/characters.service';
-import { SectionTitleModule } from 'src/app/shared/components/section-title/section-title.module';
+import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 
 import { CharactersComponent } from '../characters/characters.component';
 import { CharacterCardComponent } from './character-card/character-card.component';
@@ -14,10 +13,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: CharactersComponent
-        // resolve: {
-        //   DataSourceResolver: AircraftTypeGetAllResolver
-        // }
+        component: CharactersComponent,
+        resolve: {
+          DatasourceResolver: CharactersGetAllResolver
+        }
       },
     ]
   }
@@ -30,12 +29,11 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
-    SectionTitleModule,
-    MatCardModule
+    BaseListModule
   ],
   providers: [
-    CharactersService
+    CharactersService,
+    CharactersGetAllResolver
   ]
 })
 export class CharactersModule { }

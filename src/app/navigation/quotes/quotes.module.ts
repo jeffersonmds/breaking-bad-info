@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { QuotesComponent } from './quotes.component';
 import { QuotesService } from 'src/app/services/quotes.service';
-import { SectionTitleModule } from 'src/app/shared/components/section-title/section-title.module';
 import { QuoteCardComponent } from './quote-card/quote-card.component';
-import { MatCardModule } from '@angular/material/card';
+import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
+import { QuotesGetAllResolver } from 'src/app/resolvers/quotes.resolver';
 
 const routes: Routes = [
   {
@@ -14,9 +13,9 @@ const routes: Routes = [
       {
         path: '',
         component: QuotesComponent,
-        // resolve: {
-        //   DataSourceResolver: AircraftTypeGetAllResolver
-        // }
+        resolve: {
+          DatasourceResolver: QuotesGetAllResolver
+        }
       },
     ]
   }
@@ -29,12 +28,11 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
-    SectionTitleModule,
-    MatCardModule
+    BaseListModule
   ],
   providers: [
-    QuotesService
+    QuotesService,
+    QuotesGetAllResolver
   ]
 })
 export class QuotesModule { }

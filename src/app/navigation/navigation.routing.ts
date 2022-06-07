@@ -10,7 +10,6 @@ const routes: Routes = [
       children: [
           {
               path: '',
-              title: 'Breaking Bad',
               component: HomeComponent
           },
           {

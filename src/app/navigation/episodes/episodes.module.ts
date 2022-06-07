@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { RouterModule, Routes } from '@angular/router';
+import { EpisodesGetAllResolver } from 'src/app/resolvers/episodes.resolver';
 import { EpisodesService } from 'src/app/services/episodes.service';
-import { SectionTitleModule } from 'src/app/shared/components/section-title/section-title.module';
+import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 
 import { EpisodesComponent } from '../episodes/episodes.component';
 import { EpisodeCardComponent } from './episode-card/episode-card.component';
@@ -15,9 +14,9 @@ const routes: Routes = [
       {
         path: '',
         component: EpisodesComponent,
-        // resolve: {
-        //   DataSourceResolver: AircraftTypeGetAllResolver
-        // }
+        resolve: {
+          DatasourceResolver: EpisodesGetAllResolver
+        }
       },
     ]
   }
@@ -30,12 +29,11 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
-    SectionTitleModule,
-    MatCardModule
+    BaseListModule
   ],
   providers: [
-    EpisodesService
+    EpisodesService,
+    EpisodesGetAllResolver
   ]
 })
 export class EpisodesModule { }
