@@ -1,0 +1,6 @@
+<app-section-title title="Deaths" icon="fa-solid fa-skull"></app-section-title>
+<div class="row">
+  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" *ngFor="let death of deathsDatasource">
+    <app-death-card [death]="death"></app-death-card>
+  </div>
+</div>

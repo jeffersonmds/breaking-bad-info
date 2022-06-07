@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'breaking-bad-info';
+  private isDarkTheme = true;
+
+  constructor(private themeService: ThemeService) {
+    this.isDarkTheme = this.themeService.isDarkTheme;
+    this.themeService.getEvents().subscribe(x => {
+      this.isDarkTheme = x;
+    })
+  }
+
+  @HostBinding('class')
+  get themeModel() {
+    return this.isDarkTheme ? '' : 'light-theme';
+  }
 }

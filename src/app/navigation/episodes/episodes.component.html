@@ -1,0 +1,6 @@
+<app-section-title title="Episodes" icon="fa-solid fa-video"></app-section-title>
+<div class="row">
+  <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" *ngFor="let episode of episodesDatasource">
+    <app-episode-card [episode]="episode"></app-episode-card>
+  </div>
+</div>

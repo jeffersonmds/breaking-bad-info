@@ -1,0 +1,97 @@
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  padding: 15px;
+  font-size: 2rem;
+  overflow-y: scroll;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.menu-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*Slider*/
+#checkbox {
+  display: none;
+}
+.toggler {
+  display: block;
+  width: 60px;
+  height: 31px;
+  border: 2px solid #20E256;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  left: 30%;
+}
+.ball,
+.sun,
+.moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ball {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #20E256;
+  border-radius: 50%;
+  left: 1px;
+  z-index: 10;
+  transition: transform
+  .5s ease-in-out;
+}
+
+.sun {
+  left: 5px;
+}
+.moon {
+  right: 5px;
+}
+#checkbox:checked + .ball {
+  transform:
+  translate(29px, -50%);
+}
+
+.logo {
+  height: -webkit-fill-available;
+  padding: 3px;
+  margin-right: 10px;
+}
