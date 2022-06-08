@@ -1,5 +1,11 @@
 .card-content {
-  padding: 16px;
+  padding: 10px;
+}
+
+.card-content:hover {
+	-webkit-box-shadow: 0px 13px 30px -15px #000000;
+	box-shadow: 0px 13px 30px -15px #000000;
+  cursor: pointer;
 }
 
 img {
@@ -8,35 +14,3 @@ img {
   object-position: top;
 }
 
-.appearance {
-  padding: 8px 5% 8px 5%;
-  border-radius: 10px;
-  border: 2px solid white;
-}
-
-.appearance-true {
-  background-color: #20E256;
-}
-
-.appearance-false {
-  background-color: gray;
-}
-
-.appearance-season {
-  justify-content: space-between;
-}
-
-.zoom {
-  transition: transform .2s;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
-  transform: scale(1.1);
-}
-
-ul {
-  margin-top: 2px;
-  margin-bottom: 0px;
-}

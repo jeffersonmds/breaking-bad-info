@@ -11,6 +11,7 @@ import { BaseListComponent } from 'src/app/shared/components/base/base-list/base
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent extends BaseListComponent<Character, CharactersService> implements OnInit {
+  filter!: string;
 
   constructor(_charactersService: CharactersService,
               _activatedRoute: ActivatedRoute) {

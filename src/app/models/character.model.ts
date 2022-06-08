@@ -6,6 +6,8 @@ export class Character {
   img!: string;
   status!: string;
   appearance!: number[]
+  better_call_saul_appearance!: number[]
   nickname!: string;
   portrayed!: string;
+  category!: string;
 }

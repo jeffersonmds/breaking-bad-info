@@ -3,9 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharactersGetAllResolver } from 'src/app/resolvers/characters.resolver';
 import { CharactersService } from 'src/app/services/characters.service';
 import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
+import { FilterByCharacter } from 'src/app/shared/pipes/filter-by-character.pipe';
 
 import { CharactersComponent } from '../characters/characters.component';
 import { CharacterCardComponent } from './character-card/character-card.component';
+import { CharactersListComponent } from './characters-list/characters-list.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 const routes: Routes = [
   {
@@ -25,7 +28,10 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     CharactersComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    CharactersListComponent,
+    CharacterDetailsComponent,
+    FilterByCharacter
   ],
   imports: [
     RouterModule.forChild(routes),

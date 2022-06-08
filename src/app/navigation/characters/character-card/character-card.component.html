@@ -1,12 +1,12 @@
 <div class="card-content">
-  <mat-card class="mat-elevation-z4">
+  <mat-card class="mat-elevation-z4" (click)="openDialog()">
     <mat-card-header>
       <mat-card-subtitle>{{character.nickname}}</mat-card-subtitle>
       <mat-card-title>{{character.name}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="character.img" [alt]="character.name" class="zoom">
-    <mat-card-content>
-      <div class="mb-1">
+    <img mat-card-image [src]="character.img" [alt]="character.name">
+    <!--<mat-card-content>
+       <div class="mb-1">
         <div class="me-1">Occupation:</div>
         <ul>
           <li *ngFor="let item of character.occupation">{{item}}</li>
@@ -25,13 +25,15 @@
         <div>{{character.status}}</div>
       </div>
       <div class="mb-1">Appearance:</div>
-      <div class="flex appearance-season">
-        <div [ngClass]="verifyAppearance(character.appearance, 1) ? 'appearance-true' : 'appearance-false'" class="appearance">1</div>
-        <div [ngClass]="verifyAppearance(character.appearance, 2) ? 'appearance-true' : 'appearance-false'" class="appearance">2</div>
-        <div [ngClass]="verifyAppearance(character.appearance, 3) ? 'appearance-true' : 'appearance-false'" class="appearance">3</div>
-        <div [ngClass]="verifyAppearance(character.appearance, 4) ? 'appearance-true' : 'appearance-false'" class="appearance">4</div>
-        <div [ngClass]="verifyAppearance(character.appearance, 5) ? 'appearance-true' : 'appearance-false'" class="appearance">5</div>
-      </div>
-    </mat-card-content>
+      <table class="appearance-table">
+        <tr>
+          <td [ngClass]="verifyAppearance(character.appearance, 1) ? 'appearance-true' : 'appearance-false'" class="appearance">1</td>
+          <td [ngClass]="verifyAppearance(character.appearance, 2) ? 'appearance-true' : 'appearance-false'" class="appearance">2</td>
+          <td [ngClass]="verifyAppearance(character.appearance, 3) ? 'appearance-true' : 'appearance-false'" class="appearance">3</td>
+          <td [ngClass]="verifyAppearance(character.appearance, 4) ? 'appearance-true' : 'appearance-false'" class="appearance">4</td>
+          <td [ngClass]="verifyAppearance(character.appearance, 5) ? 'appearance-true' : 'appearance-false'" class="appearance">5</td>
+        </tr>
+      </table>
+    </mat-card-content> -->
   </mat-card>
 </div>
