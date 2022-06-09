@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Episode } from 'src/app/models/episode.model';
+import { EpisodeDetailsComponent } from '../episode-details/episode-details.component';
 
 @Component({
   selector: 'app-episode-card',
   templateUrl: './episode-card.component.html',
   styleUrls: ['./episode-card.component.scss']
 })
-export class EpisodeCardComponent implements OnInit {
+export class EpisodeCardComponent {
   @Input() episode!: Episode;
 
-  constructor() { }
+  constructor(private dialogRef : MatDialog) { }
 
-  ngOnInit(): void {
+  openDialog(){
+    this.dialogRef.open(EpisodeDetailsComponent, { data : this.episode });
   }
 
 }

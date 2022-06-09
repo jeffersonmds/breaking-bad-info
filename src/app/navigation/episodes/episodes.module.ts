@@ -6,6 +6,8 @@ import { BaseListModule } from 'src/app/shared/components/base/base-list/base-li
 
 import { EpisodesComponent } from '../episodes/episodes.component';
 import { EpisodeCardComponent } from './episode-card/episode-card.component';
+import { EpisodesListComponent } from './episodes-list/episodes-list.component';
+import { EpisodeDetailsComponent } from './episode-details/episode-details.component';
 
 const routes: Routes = [
   {
@@ -25,7 +27,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     EpisodesComponent,
-    EpisodeCardComponent
+    EpisodeCardComponent,
+    EpisodesListComponent,
+    EpisodeDetailsComponent
   ],
   imports: [
     RouterModule.forChild(routes),

@@ -5,3 +5,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .flex {
   display: flex;
 }
+
+.card-content:hover {
+  -webkit-box-shadow: 0px 13px 30px -15px #000000;
+  box-shadow: 0px 13px 30px -15px #000000;
+  cursor: pointer;
+}
+
+.no-content {
+  text-align: center;
+  margin-top: 100px;
+  color: gray;
+  font-size: 24px;
+}

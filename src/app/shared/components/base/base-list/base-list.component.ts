@@ -19,9 +19,13 @@ export abstract class BaseListComponent<TModel, TService extends BaseService<TMo
 
   ngOnInit(): void {
     const dataSourceResolver = this._activatedRoute.snapshot.data['DatasourceResolver'];
-      if (dataSourceResolver)
+      if (dataSourceResolver) {
         this.datasource = dataSourceResolver;
+        this.initializeDatasource();
+      }
   }
+
+  initializeDatasource(): void {}
 
   ngOnDestroy(): void {
     this.unsub$.next(null);

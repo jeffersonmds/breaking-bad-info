@@ -1,0 +1,19 @@
+<mat-card class="content mat-elevation-z0">
+  <mat-card-header>
+    <mat-card-subtitle>Season {{episode.season}}</mat-card-subtitle>
+    <mat-card-title>{{episode.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content class="mt-2">
+    <div class="flex mb-2">
+      <div class="me-1">Air date:</div>
+      <div>{{episode.air_date}}</div>
+    </div>
+    <div class="mb-1" *ngIf="episode.characters && episode.characters.length">
+      <div class="me-1">Characters:</div>
+      <ul>
+        <li *ngFor="let item of episode.characters">{{item}}</li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>

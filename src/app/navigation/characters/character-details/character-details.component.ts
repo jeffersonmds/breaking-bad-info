@@ -13,7 +13,6 @@ export class CharacterDetailsComponent {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.character = data;
-    console.log(this.character);
   }
 
   verifyAppearance(appearance: number[], season: number) {

@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { SectionTitleModule } from '../../section-title/section-title.module';
 import { FormsModule } from '@angular/forms';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatDividerModule,
     MatDialogModule
   ]
 })
