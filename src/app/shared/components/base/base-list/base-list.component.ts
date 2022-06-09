@@ -11,6 +11,7 @@ export abstract class BaseListComponent<TModel, TService extends BaseService<TMo
   _service: TService;
   datasource!: TModel[];
   unsub$ = new Subject();
+  debounce: Subject<string> = new Subject<string>();
 
   constructor(@Inject(BaseService) service: TService,
               protected _activatedRoute: ActivatedRoute) {
@@ -30,5 +31,6 @@ export abstract class BaseListComponent<TModel, TService extends BaseService<TMo
   ngOnDestroy(): void {
     this.unsub$.next(null);
     this.unsub$.complete();
+    this.debounce.unsubscribe();
   }
 }

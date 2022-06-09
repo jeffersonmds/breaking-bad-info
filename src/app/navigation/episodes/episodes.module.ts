@@ -8,6 +8,7 @@ import { EpisodesComponent } from '../episodes/episodes.component';
 import { EpisodeCardComponent } from './episode-card/episode-card.component';
 import { EpisodesListComponent } from './episodes-list/episodes-list.component';
 import { EpisodeDetailsComponent } from './episode-details/episode-details.component';
+import { FilterByEpisode } from 'src/app/shared/pipes/filter-by-episode.pipe';
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
     EpisodesComponent,
     EpisodeCardComponent,
     EpisodesListComponent,
-    EpisodeDetailsComponent
+    EpisodeDetailsComponent,
+    FilterByEpisode
   ],
   imports: [
     RouterModule.forChild(routes),

@@ -1,3 +1,4 @@
+import { debounceTime } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Episode } from 'src/app/models/episode.model';
@@ -11,6 +12,7 @@ import { BaseListComponent } from 'src/app/shared/components/base/base-list/base
   styleUrls: ['./episodes.component.scss']
 })
 export class EpisodesComponent extends BaseListComponent<Episode, EpisodesService> implements OnInit {
+  filter!: string;
   seasonsBreakingBad: Season[] = [];
   seasonsBetterCallSaul: Season[] = [];
 
@@ -31,5 +33,9 @@ export class EpisodesComponent extends BaseListComponent<Episode, EpisodesServic
     for (let seasonIndex = 1; seasonIndex <= totalSeasons; seasonIndex++) {
       this.seasonsBetterCallSaul.push(new Season(betterCallSaulEpisodes.filter(x => { return x.season === seasonIndex.toString() })));
     }
+
+    this.debounce
+      .pipe(debounceTime(300))
+      .subscribe(filter => this.filter = filter);
   }
 }

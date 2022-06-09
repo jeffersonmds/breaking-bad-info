@@ -1,4 +1,12 @@
 <app-section-title title="Episodes" icon="fa-solid fa-video"></app-section-title>
 
-<app-episodes-list [seasons]="seasonsBreakingBad" series="Breaking Bad"></app-episodes-list>
-<app-episodes-list [seasons]="seasonsBetterCallSaul" series="Better Call Saul"></app-episodes-list>
+<div class="textbox">
+  <mat-form-field id="textboxFilter" appearance="fill">
+    <mat-label>Search episode</mat-label>
+    <input #inputFilter type="search" matInput (keyup)="debounce.next(inputFilter.value)">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+<app-episodes-list [seasons]="seasonsBreakingBad | filterByEpisode: filter" series="Breaking Bad"></app-episodes-list>
+<app-episodes-list [seasons]="seasonsBetterCallSaul | filterByEpisode: filter" series="Better Call Saul"></app-episodes-list>
