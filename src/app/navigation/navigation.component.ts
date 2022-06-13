@@ -9,19 +9,11 @@ import { ThemeService } from '../services/theme/theme.service';
 })
 export class NavigationComponent implements AfterViewInit {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
-  isDarkTheme: boolean = true;
 
-  constructor(private themeService: ThemeService ) {
-                this.isDarkTheme = this.themeService.isDarkTheme;
-              }
+  constructor() { }
 
   ngAfterViewInit(): void {
-    this.onResize(window.innerWidth);
-  }
-
-  onSliderThemeToggle(event: any) {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.themeService.sendEvent(this.isDarkTheme);
+    setTimeout(() => { this.onResize(window.innerWidth); }, 10);
   }
 
   @HostListener('window:resize', ['$event.target.innerWidth'])

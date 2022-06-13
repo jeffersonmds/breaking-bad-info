@@ -7,43 +7,8 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <button mat-button class="menu-button" [routerLink]="['']">
-        <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-house"></mat-icon>
-        <span>Home</span>
-    </button>
-    <button mat-button class="menu-button" [routerLink]="['/characters']">
-        <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-people-group"></mat-icon>
-        <span>Characters</span>
-    </button>
-    <button mat-button class="menu-button" [routerLink]="['/episodes']">
-        <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-video"></mat-icon>
-        <span>Episodes</span>
-    </button>
-    <button mat-button class="menu-button" [routerLink]="['/quotes']">
-        <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-quote-left"></mat-icon>
-        <span>Quotes</span>
-    </button>
-    <button mat-button class="menu-button" [routerLink]="['/deaths']">
-        <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-skull"></mat-icon>
-        <span>Deaths</span>
-    </button>
-
-    <mat-divider></mat-divider>
-
-    <label for="checkbox" class="toggler mt-2 mb-2">
-      <input type="checkbox" id="checkbox" (change)="onSliderThemeToggle($event)" [checked]="isDarkTheme">
-      <span class="ball"></span>
-      <i class="fa-regular fa-sun sun"></i>
-      <i class="fa-regular fa-moon moon"></i>
-    </label>
-
-    <mat-divider></mat-divider>
-
-    <!-- <button mat-button class="menu-button">
-        <mat-icon>help</mat-icon>
-        <span>Help</span>
-    </button> -->
+  <mat-sidenav #sidenav class="mat-elevation-z8">
+    <app-sidenav-menu></app-sidenav-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -52,31 +17,3 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="characters">Characters</a>
-      <a mat-list-item href="episodes">Episodes</a>
-      <a mat-list-item href="quotes">Quotes</a>
-      <a mat-list-item href="deaths">Deaths</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>breaking-bad-info</span>
-    </mat-toolbar>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
