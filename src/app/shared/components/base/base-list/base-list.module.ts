@@ -9,6 +9,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SectionTitleModule } from '../../section-title/section-title.module';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 
 
@@ -22,7 +24,9 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatButtonModule,
     MatDividerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule,
+    MatButtonToggleModule
   ]
 })
 export class BaseListModule { }

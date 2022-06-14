@@ -33,6 +33,11 @@ const routes: Routes = [
               loadChildren: () => import('./deaths/deaths.module').then(m => m.DeathsModule)
           },
           {
+              path: 'memory-game',
+              title: 'Breaking Bad - Memory Game',
+              loadChildren: () => import('./memory-game/memory-game.module').then(m => m.MemoryGameModule)
+          },
+          {
             path: '**',
             redirectTo: ''
           }

@@ -1,0 +1,21 @@
+img {
+  height: 260px;
+}
+
+.character-card {
+  object-fit: cover;
+  object-position: top;
+}
+
+.card {
+  border-radius: 15px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y: top;
+  background-position-x: center;
+  height: 260px;
+}
+
+.card-content {
+  padding: 10px;
+}

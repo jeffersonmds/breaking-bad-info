@@ -1,0 +1,16 @@
+<article class="card-content card-clickable">
+  <div *ngIf="isCardVisible"
+       class="card"
+       [style.background-image]="'url(' + card.img + ')'"></div>
+
+  <div *ngIf="!isCardVisible"
+       class="card"
+       [style.background-image]="'url(../../assets/images/lets-cook.jpg)'"
+       (click)="revealCard()"></div>
+
+
+  <!-- <mat-card class="mat-elevation-z4" (click)="revealCard()">
+    <img class="character-card" *ngIf="isCardVisible" mat-card-image [src]="card.img" [alt]="card.name">
+    <img *ngIf="!isCardVisible" mat-card-image src="../../assets/images/lets-cook.jpg" alt="Breaking Bad">
+  </mat-card> -->
+</article>

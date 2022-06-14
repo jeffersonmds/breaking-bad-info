@@ -1,0 +1,13 @@
+.difficulty-selector mat-button-toggle-group {
+  font-size: 14px;
+  height: 35px;
+  align-items: center;
+}
+
+.difficulty-selector mat-button-toggle {
+  min-width: 100px;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
