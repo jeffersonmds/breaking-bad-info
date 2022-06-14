@@ -13,7 +13,7 @@ export class NavigationComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    setTimeout(() => { this.onResize(window.innerWidth); }, 10);
+    setTimeout(() => this.onResize(window.innerWidth), 10);
   }
 
   @HostListener('window:resize', ['$event.target.innerWidth'])

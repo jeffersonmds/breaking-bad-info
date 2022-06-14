@@ -21,6 +21,15 @@
 
 <mat-divider></mat-divider>
 
+<div class="mt-2">
+  <span>Games</span>
+</div>
+<button mat-button class="menu-button" [routerLink]="['/memory-game']">
+  <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-gamepad"></mat-icon>
+  <span>Memory Game</span>
+</button>
+
+<mat-divider></mat-divider>
 <label for="checkbox" class="toggler mt-2 mb-2">
   <input type="checkbox" id="checkbox" (change)="onSliderThemeToggle($event)" [checked]="isDarkTheme">
   <span class="ball"></span>
@@ -28,7 +37,7 @@
   <i class="fa-regular fa-moon moon"></i>
 </label>
 
-<mat-divider></mat-divider>
+<!-- <mat-divider></mat-divider> -->
 
 <!-- <button mat-button class="menu-button">
   <mat-icon>help</mat-icon>

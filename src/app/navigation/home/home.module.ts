@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 
 import { HomeComponent } from './home.component';
 
@@ -10,7 +11,8 @@ import { HomeComponent } from './home.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    BaseListModule
   ],
   exports: [
     HomeComponent
