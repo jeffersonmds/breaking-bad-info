@@ -1,20 +1,19 @@
 mat-sidenav,
 .content {
-  margin: 16px;
   border-radius: 10px;
   padding: 15px;
-
 }
 
 mat-sidenav {
+  margin: 16px;
   width: 200px;
   border-right: none;
   text-align: center;
 }
 
 .content {
+  margin: 16px 16px 16px 32px;
   height: calc(100vh - 127px);
-  margin-left: 32px;
   overflow-y: auto;
 }
 
@@ -26,4 +25,12 @@ mat-sidenav-container {
   height: -webkit-fill-available;
   padding: 3px;
   margin-right: 10px;
+}
+
+@media (max-width: 900px)
+{
+  .content {
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+  }
 }

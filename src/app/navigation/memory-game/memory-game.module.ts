@@ -6,6 +6,7 @@ import { CharactersGetAllResolver } from 'src/app/resolvers/characters.resolver'
 import { CharactersService } from 'src/app/services/characters.service';
 import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 import { GuessCardComponent } from './guess-card/guess-card.component';
+import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MemoryGameComponent,
-    GuessCardComponent
+    GuessCardComponent,
+    WinnerDialogComponent
   ],
   imports: [
     RouterModule.forChild(routes),

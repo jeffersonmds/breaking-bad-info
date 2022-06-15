@@ -1,21 +1,57 @@
-img {
-  height: 260px;
-}
-
-.character-card {
-  object-fit: cover;
-  object-position: top;
-}
-
 .card {
   border-radius: 15px;
   background-repeat:no-repeat;
   background-size:cover;
-  background-position-y: top;
   background-position-x: center;
   height: 260px;
 }
 
+.front {
+  background-position-y: top;
+}
+
+.back {
+  background-position-y: center;
+}
+
 .card-content {
   padding: 10px;
+}
+
+
+@media (max-width: 1400px)
+{
+  .card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px)
+{
+  .card {
+    height: 170px;
+  }
+  .card-content {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .card {
+    height: 100px;
+  }
+  .card-content {
+    padding: 3px;
+  }
+}
+
+@media (max-width: 500px)
+{
+  .card {
+    height: 86px;
+  }
+  .card-content {
+    padding: 2px;
+  }
 }

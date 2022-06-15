@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Character } from 'src/app/models/character.model';
 
 @Component({
@@ -6,14 +6,13 @@ import { Character } from 'src/app/models/character.model';
   templateUrl: './guess-card.component.html',
   styleUrls: ['./guess-card.component.scss']
 })
-export class GuessCardComponent implements OnInit {
+export class GuessCardComponent {
   @Input() card!: Character;
+  @Input() isPlaying: boolean = true;
+  @Output() onCardClick: EventEmitter<Character> = new EventEmitter<Character>();
   isCardVisible: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   hideCard() {
     this.isCardVisible = false;
@@ -21,5 +20,12 @@ export class GuessCardComponent implements OnInit {
 
   revealCard() {
     this.isCardVisible = true;
+  }
+
+  protected onClick() {
+    if (this.isPlaying) {
+      this.revealCard();
+      this.onCardClick.emit(this.card);
+    }
   }
 }

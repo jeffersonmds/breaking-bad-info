@@ -1,24 +1,29 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <button *ngIf="!isPlaying" mat-raised-button color="accent" (click)="play()">Play</button>
+  <button *ngIf="!isPlaying && !isWinner" mat-raised-button color="accent" (click)="play()">Play</button>
   <div *ngIf="!isPlaying" class="difficulty-selector">
-    <mat-button-toggle-group name="difficulty" [(value)]="charactersToGuess" (change)="prepareCards($event)" aria-label="Select difficulty">
+    <mat-button-toggle-group name="difficulty" [(value)]="charactersToGuess" (change)="onDifficultyChange($event)" aria-label="Select difficulty">
       <mat-button-toggle [value]="8">Easy</mat-button-toggle>
       <mat-button-toggle [value]="10">Medium</mat-button-toggle>
       <mat-button-toggle [value]="12">Hard</mat-button-toggle>
     </mat-button-toggle-group>
   </div>
-  <button *ngIf="isPlaying" mat-raised-button color="accent" (click)="initializeGame()">Stop</button>
-  <div *ngIf="isPlaying">
 
+  <button *ngIf="isPlaying && !isWinner" mat-raised-button color="accent" (click)="initializeGame()">Stop</button>
+  <button *ngIf="isWinner" mat-raised-button color="accent" (click)="initializeGame()">Restart</button>
+  <div *ngIf="isPlaying" class="flex life-counter">
+    <span>Lifes:</span>
+    <img *ngFor="let item of counter()" src="../../assets/images/lab.svg" alt="Breaking Bad" class="life">
   </div>
+
   <div>
-    {{gameStatusText}}
+    <span class="me-1">Time:</span>
+    <span>{{timeCounter}}</span>
   </div>
 </mat-toolbar>
 
 
-<div class="row">
-  <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let card of cardsPlaying">
-    <app-guess-card [card]="card"></app-guess-card>
+<div class="row me-0 ms-0">
+  <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 p-0" *ngFor="let card of cardsPlaying">
+    <app-guess-card [card]="card" [isPlaying]="isPlaying && canClickCards" (onCardClick)="onCardClick($event)"></app-guess-card>
   </div>
 </div>
