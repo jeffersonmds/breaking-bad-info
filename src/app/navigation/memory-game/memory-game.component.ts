@@ -1,3 +1,4 @@
+import { ScreenService } from './../../services/screen.service';
 import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
@@ -18,6 +19,7 @@ export class MemoryGameComponent extends BaseListComponent<Character, Characters
   charactersToGuess = 10;
   isPlaying: boolean = false;
   isWinner: boolean = false;
+  isSmallScreen: boolean = false;
   canClickCards: boolean = false;
   cardsPlaying!: Character[];
   cardSelected!: Character | null;
@@ -28,11 +30,18 @@ export class MemoryGameComponent extends BaseListComponent<Character, Characters
 
   constructor(_charactersService: CharactersService,
               _activatedRoute: ActivatedRoute,
-              private dialogRef : MatDialog) {
+              private dialogRef : MatDialog,
+              private screenService : ScreenService) {
     super(_charactersService, _activatedRoute);
+    this.screenService.changed.subscribe(() => this.updateLayout());
+  }
+
+  updateLayout() {
+    this.isSmallScreen = this.screenService.sizes['screen-small'] || this.screenService.sizes['screen-x-small'];
   }
 
   override initializeDatasource(): void {
+    setTimeout(() => this.updateLayout(), 10);
     setTimeout(() => {
       this.filterNonImageFromDatasource();
       this.initializeGame()
@@ -64,14 +73,14 @@ export class MemoryGameComponent extends BaseListComponent<Character, Characters
     this.hideAllAndBeginTimeout = setTimeout(() => this.hideAllAndBegin(), 5000);
   }
 
-  onDifficultyChange(event: any) {
-    this.prepareCards(event);
+  onDifficultyChange(value: number) {
+    this.prepareCards(value);
     this.timeCounter = this.setTime();
   }
 
-  prepareCards(event: any = null) {
-    if (event) {
-      this.charactersToGuess = event.value;
+  prepareCards(value: number | null = null) {
+    if (value) {
+      this.charactersToGuess = value;
     }
 
     const characters = this.datasource.sort(() => .5 - Math.random()).slice(0, this.charactersToGuess);
@@ -158,6 +167,12 @@ export class MemoryGameComponent extends BaseListComponent<Character, Characters
         return 70;
       default:
         return 60;
+    }
+  }
+
+  override destroyComponent(): void {
+    if (this.timeSubscription) {
+      this.timeSubscription.unsubscribe();
     }
   }
 }

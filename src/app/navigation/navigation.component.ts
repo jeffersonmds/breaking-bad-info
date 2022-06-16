@@ -1,6 +1,6 @@
-import { Component, HostListener, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { ThemeService } from '../services/theme/theme.service';
+import { ScreenService } from '../services/screen.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,16 +10,12 @@ import { ThemeService } from '../services/theme/theme.service';
 export class NavigationComponent implements AfterViewInit {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
-  constructor() { }
+  constructor(private screen: ScreenService) { }
 
-  ngAfterViewInit(): void {
-    setTimeout(() => this.onResize(window.innerWidth), 10);
-  }
-
-  @HostListener('window:resize', ['$event.target.innerWidth'])
-  onResize(width: number) {
+  updateDrawer() {
+    const isSmall = this.screen.sizes['screen-small'] || this.screen.sizes['screen-x-small'];
     if (this.sidenav) {
-      if (width > 900) {
+      if (!isSmall) {
         this.sidenav.mode = 'side';
         this.sidenav.open();
       } else {
@@ -27,5 +23,10 @@ export class NavigationComponent implements AfterViewInit {
         this.sidenav.close();
       }
     }
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => this.updateDrawer(), 10);
+    this.screen.changed.subscribe(() => this.updateDrawer());
   }
 }

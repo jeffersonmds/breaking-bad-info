@@ -32,5 +32,8 @@ export abstract class BaseListComponent<TModel, TService extends BaseService<TMo
     this.unsub$.next(null);
     this.unsub$.complete();
     this.debounce.unsubscribe();
+    this.destroyComponent()
   }
+
+  destroyComponent(): void {}
 }
