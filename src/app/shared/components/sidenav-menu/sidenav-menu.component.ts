@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -9,13 +10,18 @@ import { ThemeService } from 'src/app/services/theme.service';
 export class SidenavMenuComponent {
   isDarkTheme: boolean = true;
 
-  constructor(private themeService: ThemeService ) {
+  constructor(private themeService: ThemeService,
+              private router: Router) {
     this.isDarkTheme = this.themeService.isDarkTheme;
   }
 
   onSliderThemeToggle(event: any) {
     this.isDarkTheme = !this.isDarkTheme;
     this.themeService.sendEvent(this.isDarkTheme);
+  }
+
+  isItemSelected(url: string): boolean {
+    return this.router.url === url;
   }
 
 }
