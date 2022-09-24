@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Quote } from '../models/quote.model';
+import { Quote } from '@BreakingBadModels';
 import { BaseService } from './base/base-service';
 
 @Injectable()

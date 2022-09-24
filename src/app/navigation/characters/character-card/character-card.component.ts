@@ -1,6 +1,7 @@
-import { Character } from './../../../models/character.model';
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Character } from '@BreakingBadModels';
+
 import { CharacterDetailsComponent } from '../character-details/character-details.component';
 
 @Component({

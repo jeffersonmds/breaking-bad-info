@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { Observable, map } from "rxjs";
-import { Death } from "../models/death.model";
-import { DeathsService } from "../services/deaths.service";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { Death } from '@BreakingBadModels';
+import { DeathsService } from '@BreakingBadServices';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class DeathsGetAllResolver implements Resolve<Death[] | undefined> {

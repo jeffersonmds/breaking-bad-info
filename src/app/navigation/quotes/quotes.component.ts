@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subject, takeUntil } from 'rxjs';
-import { Quote } from 'src/app/models/quote.model';
-import { QuotesService } from 'src/app/services/quotes.service';
+import { Quote } from '@BreakingBadModels';
+import { QuotesService } from '@BreakingBadServices';
 import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
 
 @Component({

@@ -1,11 +1,12 @@
-import { ScreenService } from './../../services/screen.service';
-import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { Character } from '@BreakingBadModels';
+import { CharactersService } from '@BreakingBadServices';
 import { interval, Subscription } from 'rxjs';
-import { Character } from 'src/app/models/character.model';
-import { CharactersService } from 'src/app/services/characters.service';
 import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
+
+import { ScreenService } from './../../services/screen.service';
 import { GuessCardComponent } from './guess-card/guess-card.component';
 import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 

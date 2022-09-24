@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { Observable, map } from "rxjs";
-import { Quote } from "../models/quote.model";
-import { QuotesService } from "../services/quotes.service";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { Quote } from '@BreakingBadModels';
+import { QuotesService } from '@BreakingBadServices';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class QuotesGetAllResolver implements Resolve<Quote[] | undefined> {

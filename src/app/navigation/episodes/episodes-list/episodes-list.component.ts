@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Season } from 'src/app/models/season.model';
+import { Season } from '@BreakingBadModels';
 
 @Component({
   selector: 'app-episodes-list',

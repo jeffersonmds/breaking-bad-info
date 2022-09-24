@@ -1,9 +1,9 @@
-import { Character } from './../../models/character.model';
 import { Component, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
-import { CharactersService } from 'src/app/services/characters.service';
 import { ActivatedRoute } from '@angular/router';
+import { Character } from '@BreakingBadModels';
+import { CharactersService } from '@BreakingBadServices';
 import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
+
 
 @Component({
   selector: 'app-characters',

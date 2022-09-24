@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Death } from 'src/app/models/death.model';
+import { Death } from '@BreakingBadModels';
 
 @Component({
   selector: 'app-death-card',

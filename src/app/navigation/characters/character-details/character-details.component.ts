@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
-import { Character } from 'src/app/models/character.model';
+import { Character } from '@BreakingBadModels';
 
 @Component({
   selector: 'app-character-details',

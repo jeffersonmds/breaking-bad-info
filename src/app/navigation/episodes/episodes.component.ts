@@ -1,9 +1,8 @@
-import { debounceTime } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Episode } from 'src/app/models/episode.model';
-import { Season } from 'src/app/models/season.model';
-import { EpisodesService } from 'src/app/services/episodes.service';
+import { Episode, Season } from '@BreakingBadModels';
+import { EpisodesService } from '@BreakingBadServices';
+import { debounceTime } from 'rxjs';
 import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
 
 @Component({

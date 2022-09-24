@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { Observable, map } from "rxjs";
-import { Episode } from "../models/episode.model";
-import { EpisodesService } from "../services/episodes.service";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { Episode } from '@BreakingBadModels';
+import { EpisodesService } from '@BreakingBadServices';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class EpisodesGetAllResolver implements Resolve<Episode[] | undefined> {

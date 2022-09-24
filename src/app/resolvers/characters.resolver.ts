@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
-import { Observable, map } from "rxjs";
-import { Character } from "../models/character.model";
-import { CharactersService } from "../services/characters.service";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { Character } from '@BreakingBadModels';
+import { CharactersService } from '@BreakingBadServices';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class CharactersGetAllResolver implements Resolve<Character[] | undefined> {

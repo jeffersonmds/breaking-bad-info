@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Character } from 'src/app/models/character.model';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Character } from '@BreakingBadModels';
 
 @Component({
   selector: 'app-guess-card',

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Episode } from 'src/app/models/episode.model';
+import { Episode } from '@BreakingBadModels';
 import { EpisodeDetailsComponent } from '../episode-details/episode-details.component';
 
 @Component({
