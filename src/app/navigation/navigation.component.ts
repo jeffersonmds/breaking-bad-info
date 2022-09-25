@@ -34,7 +34,7 @@ export class NavigationComponent implements AfterViewInit {
 
   //Switch language
   translateLanguageTo(lang: string) {
-    this.selectedLang = lang;
+    localStorage.setItem('LANG', lang);
     this.translate.use(lang);
   }
 

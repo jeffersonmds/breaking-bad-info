@@ -11,6 +11,7 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   private isDarkTheme = true;
+  private availableLangs = ['en', 'es', 'pt'];
 
   constructor(@Inject(DOCUMENT) private document: Document,
               private renderer: Renderer2,
@@ -24,11 +25,16 @@ export class AppComponent {
     })
     this.swithThemeMode();
 
+    let lang = localStorage.getItem('LANG');
+    if (!lang || !this.availableLangs.includes(lang)) {
+      lang = navigator.language.substring(0,2);
+    }
+
     // Register translation languages
-    translate.addLangs(['en', 'es', 'pt']);
+    translate.addLangs(this.availableLangs);
     // Set default language
     translate.setDefaultLang('en');
-    translate.use('en');
+    translate.use(lang);
   }
 
   swithThemeMode() {
