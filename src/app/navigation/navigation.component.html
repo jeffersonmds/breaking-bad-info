@@ -4,6 +4,11 @@
       <mat-icon *ngIf="sidenav.opened">close</mat-icon>
   </button>
   <img src="../../assets/images/breaking-bad-logo.svg" alt="Breaking Bad" class="logo">
+
+  <mat-select [(value)]="selectedLang" (valueChange)="translateLanguageTo($event)">
+    <mat-option *ngFor="let lang of langs" [value]="lang">{{lang | uppercase}}</mat-option>
+  </mat-select>
+
 </mat-toolbar>
 
 <mat-sidenav-container>

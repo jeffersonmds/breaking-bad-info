@@ -5,6 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SidenavMenuComponent } from './sidenav-menu.component';
 
@@ -21,6 +22,7 @@ import { SidenavMenuComponent } from './sidenav-menu.component';
     MatSidenavModule,
     MatIconModule,
     MatDividerModule,
+    TranslateModule
   ],
   exports: [
     SidenavMenuComponent

@@ -1,8 +1,8 @@
-<app-section-title title="Characters" icon="fa-solid fa-people-group"></app-section-title>
+<app-section-title title="{{'CHARACTERS.TITLE' | translate}}" icon="fa-solid fa-people-group"></app-section-title>
 
 <div class="textbox">
   <mat-form-field id="textboxFilter" appearance="fill">
-    <mat-label>Search character</mat-label>
+    <mat-label>{{'CHARACTERS.FILTER' | translate}}</mat-label>
     <input type="search" matInput [(ngModel)]="filter">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>

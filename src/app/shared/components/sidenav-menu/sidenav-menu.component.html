@@ -1,32 +1,32 @@
 <button mat-button class="menu-button" [routerLink]="['']" [ngClass]="isItemSelected('/') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-house"></mat-icon>
-  <span>Home</span>
+  <span>{{'HOME.TITLE' | translate}}</span>
 </button>
 <button mat-button class="menu-button" [routerLink]="['/characters']" [ngClass]="isItemSelected('/characters') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-people-group"></mat-icon>
-  <span>Characters</span>
+  <span>{{'CHARACTERS.TITLE' | translate}}</span>
 </button>
 <button mat-button class="menu-button" [routerLink]="['/episodes']" [ngClass]="isItemSelected('/episodes') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-video"></mat-icon>
-  <span>Episodes</span>
+  <span>{{'EPISODES.TITLE' | translate}}</span>
 </button>
 <button mat-button class="menu-button" [routerLink]="['/quotes']" [ngClass]="isItemSelected('/quotes') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-quote-left"></mat-icon>
-  <span>Quotes</span>
+  <span>{{'QUOTES.TITLE' | translate}}</span>
 </button>
 <button mat-button class="menu-button" [routerLink]="['/deaths']" [ngClass]="isItemSelected('/deaths') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-skull"></mat-icon>
-  <span>Deaths</span>
+  <span>{{'DEATHS.TITLE' | translate}}</span>
 </button>
 
 <mat-divider></mat-divider>
 
 <div class="mt-2">
-  <span>Games</span>
+  <span>{{'GAMES_SECTION' | translate}}</span>
 </div>
 <button mat-button class="menu-button" [routerLink]="['/memory-game']" [ngClass]="isItemSelected('/memory-game') ? 'primary' : ''">
   <mat-icon class="menu-icon" fontSet="fa" fontIcon="fa-gamepad"></mat-icon>
-  <span>Memory Game</span>
+  <span>{{'MEMORY_GAME.TITLE' | translate}}</span>
 </button>
 
 <mat-divider></mat-divider>

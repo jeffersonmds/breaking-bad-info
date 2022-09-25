@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +29,8 @@ import { SectionTitleModule } from '../../section-title/section-title.module';
     MatDialogModule,
     MatToolbarModule,
     MatButtonToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    TranslateModule
   ]
 })
 export class BaseListModule { }

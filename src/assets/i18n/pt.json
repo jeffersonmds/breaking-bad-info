@@ -1,0 +1,56 @@
+{
+  "HOME": {
+    "TITLE": "Início",
+
+    "SUMMARY_TITLE": "Resumo",
+    "SUMMARY_CONTENT": "Um professor de química do ensino médio diagnosticado com câncer de pulmão inoperável passa a fabricar e vender metanfetamina para garantir o futuro de sua família.",
+    "SUMMARY_CONTENT_CREATOR": "Criador",
+    "SUMMARY_CONTENT_GENRES": "Gêneros",
+
+    "STORYLINE_TITLE": "Enredo",
+    "STORYLINE_CONTENT": "Quando o professor de química Walter White é diagnosticado com câncer em estágio III e lhe dão apenas dois anos de vida, ele decide que não tem nada a perder. Ele mora com seu filho adolescente, que tem paralisia cerebral, e sua esposa, em Nova México. Determinado a garantir um futuro seguro para sua família, Walt embarca em uma carreira de drogas e crime. Ele prova ser notavelmente proficiente neste novo mundo quando começa a fabricar e vender metanfetamina com um de seus ex-alunos. A série rastreia os impactos de um diagnóstico fatal em um homem comum e trabalhador e explora como um diagnóstico fatal afeta sua moralidade e o transforma em um importante jogador do tráfico de drogas.",
+
+    "DIDYOUKNOW_TITLE": "Você sabia",
+    "DIDYOUKNOW_CONTENT_1": "Jesse Pinkman foi originalmente programado para ser escrito no 9º episódio. Durante o hiato causado pela greve dos roteiristas, o criador Vince Gilligan, impressionado com a interpretação de Jesse por Aaron Paul, decidiu restabelecer o personagem.",
+    "DIDYOUKNOW_CONTENT_2": "Foi decisão de Vince Gilligan terminar o programa na 5ª temporada. Ele não queria cometer o erro que muitos programas de sucesso cometem ao passar muito tempo até que a qualidade diminua.",
+    "DIDYOUKNOW_CONTENT_3": "Quando os personagens do programa estão fumando metanfetamina, na verdade estão fumando açúcar ou balas sem inalar. A metanfetamina é produzida pela The Candy Lady, uma empresa local em Albuquerque.",
+    "DIDYOUKNOW_CONTENT_4": "Walter foi originalmente escrito para ter 40 anos. A AMC achou que 40 anos era muito jovem para Walter ter uma crise de meia-idade e pediu que sua idade mudasse para 50.",
+    "DIDYOUKNOW_CONTENT_5": "Bryan Cranston tem uma tatuagem de Breaking Bad no dedo anelar.",
+    "DIDYOUKNOW_CONTENT_6": "No início de cada episódio, a fórmula química C10H15N junto com o número 149.24 e a palavra \"Meth\" podem ser vistas logo antes do título Breaking Bad (2008) aparecer. C10H15N é a fórmula para metanfetamina, que tem o peso molecular de 149,24.",
+
+    "DETAILS_TITLE": "Detalhes",
+    "DETAILS_RELEASE": "Data de lançamento: 20 de janeiro de 2008 (Estados Unidos)",
+    "DETAILS_ORIGIN": "País de origem: Estados Unidos",
+    "DETAILS_OFFICIAL_SITES": "Sites oficiais",
+    "DETAILS_OFFICIAL_SITES_FACEBOOK": "Facebook oficial",
+    "DETAILS_OFFICIAL_SITES_INSTAGRAM": "Instagram oficial"
+  },
+  "CHARACTERS": {
+    "TITLE": "Personagens",
+    "FILTER": "Pesquisar personagem"
+  },
+  "EPISODES": {
+    "TITLE": "Episódios",
+    "FILTER": "Pesquisar episódio"
+  },
+  "QUOTES": {
+    "TITLE": "Citações"
+  },
+  "DEATHS": {
+    "TITLE": "Mortes"
+  },
+  "GAMES_SECTION": "Jogos",
+  "MEMORY_GAME": {
+    "TITLE": "Jogo da Memória",
+    "PLAY": "Jogar",
+    "STOP": "Parar",
+    "RESTART": "Reiniciar",
+    "TIME": "Tempo",
+    "DIFFICULTY": "Difficulty",
+    "DIFFICULTY_EASY": "Fácil",
+    "DIFFICULTY_MEDIUM": "Médio",
+    "DIFFICULTY_HARD": "Difícil",
+    "WINNER_TITLE": "VOCÊ GANHOU!!",
+    "WINNER_CONTENT": "Com {{lifes}} vidas e {{timeLeft}} segundos restantes!"
+  }
+}

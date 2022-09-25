@@ -1,5 +1,5 @@
 <div class="winner">
-  <h1>YOU WON!!</h1>
-  <h2>With {{winData.lifes}} lifes and {{winData.timeLeft}} seconds left!</h2>
+  <h1>{{'MEMORY_GAME.WINNER_TITLE' | translate}}</h1>
+  <h2>{{'MEMORY_GAME.WINNER_CONTENT' | translate: winData}}</h2>
   <img [src]="gifToShow" alt="Win">
 </div>

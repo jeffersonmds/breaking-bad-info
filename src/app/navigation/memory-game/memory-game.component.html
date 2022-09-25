@@ -1,14 +1,14 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <button *ngIf="!isPlaying && !isWinner" mat-raised-button color="accent" (click)="play()">Play</button>
-  <button *ngIf="isPlaying && !isWinner" mat-raised-button color="accent" (click)="initializeGame()">Stop</button>
-  <button *ngIf="isWinner" mat-raised-button color="accent" (click)="initializeGame()">Restart</button>
+  <button *ngIf="!isPlaying && !isWinner" mat-raised-button color="accent" (click)="play()">{{'MEMORY_GAME.PLAY' | translate}}</button>
+  <button *ngIf="isPlaying && !isWinner" mat-raised-button color="accent" (click)="initializeGame()">{{'MEMORY_GAME.STOP' | translate}}</button>
+  <button *ngIf="isWinner" mat-raised-button color="accent" (click)="initializeGame()">{{'MEMORY_GAME.RESTART' | translate}}</button>
 
   <div *ngIf="!isSmallScreen">
     <div *ngIf="!isPlaying" class="difficulty-selector">
       <mat-button-toggle-group name="difficulty" [(value)]="charactersToGuess" (change)="onDifficultyChange($event.value)" aria-label="Select difficulty">
-        <mat-button-toggle [value]="8">Easy</mat-button-toggle>
-        <mat-button-toggle [value]="10">Medium</mat-button-toggle>
-        <mat-button-toggle [value]="12">Hard</mat-button-toggle>
+        <mat-button-toggle [value]="8">{{'MEMORY_GAME.DIFFICULTY_EASY' | translate}}</mat-button-toggle>
+        <mat-button-toggle [value]="10">{{'MEMORY_GAME.DIFFICULTY_MEDIUM' | translate}}</mat-button-toggle>
+        <mat-button-toggle [value]="12">{{'MEMORY_GAME.DIFFICULTY_HARD' | translate}}</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
     <div *ngIf="isPlaying" class="flex life-counter">
@@ -19,11 +19,11 @@
   <div *ngIf="isSmallScreen">
     <div *ngIf="!isPlaying" class="difficulty-selector">
       <mat-form-field appearance="fill">
-        <mat-label>Difficulty</mat-label>
+        <mat-label>{{'MEMORY_GAME.DIFFICULTY' | translate}}</mat-label>
         <mat-select [(value)]="charactersToGuess" (valueChange)="onDifficultyChange($event)">
-          <mat-option [value]="8">Easy</mat-option>
-          <mat-option [value]="10">Medium</mat-option>
-          <mat-option [value]="12">Hard</mat-option>
+          <mat-option [value]="8">{{'MEMORY_GAME.DIFFICULTY_EASY' | translate}}</mat-option>
+          <mat-option [value]="10">{{'MEMORY_GAME.DIFFICULTY_MEDIUM' | translate}}</mat-option>
+          <mat-option [value]="12">{{'MEMORY_GAME.DIFFICULTY_HARD' | translate}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -35,7 +35,7 @@
   </div>
 
   <div>
-    <span class="me-1">Time:</span>
+    <span class="me-1">{{'MEMORY_GAME.TIME' | translate}}:</span>
     <span>{{timeCounter}}</span>
   </div>
 </mat-toolbar>

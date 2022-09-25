@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ScreenService } from './services/screen.service';
 import { ThemeService } from './services/theme.service';
 
@@ -14,13 +15,20 @@ export class AppComponent {
   constructor(@Inject(DOCUMENT) private document: Document,
               private renderer: Renderer2,
               private themeService: ThemeService,
-              private screen: ScreenService) {
+              private screen: ScreenService,
+              public translate: TranslateService) {
     this.isDarkTheme = this.themeService.isDarkTheme;
     this.themeService.getEvents().subscribe(x => {
       this.isDarkTheme = x;
       this.swithThemeMode();
     })
     this.swithThemeMode();
+
+    // Register translation languages
+    translate.addLangs(['en', 'es', 'pt']);
+    // Set default language
+    translate.setDefaultLang('en');
+    translate.use('en');
   }
 
   swithThemeMode() {

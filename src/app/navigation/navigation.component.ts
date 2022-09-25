@@ -1,5 +1,6 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { TranslateService } from '@ngx-translate/core';
 import { ScreenService } from '../services/screen.service';
 
 @Component({
@@ -10,7 +11,13 @@ import { ScreenService } from '../services/screen.service';
 export class NavigationComponent implements AfterViewInit {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
-  constructor(private screen: ScreenService) { }
+  langs: string[];
+  selectedLang: string;
+  constructor(private screen: ScreenService,
+              private translate: TranslateService) {
+    this.selectedLang = translate.currentLang;
+    this.langs = translate.langs;
+  }
 
   updateDrawer() {
     const isSmall = this.screen.sizes['screen-small'] || this.screen.sizes['screen-x-small'];
@@ -23,6 +30,12 @@ export class NavigationComponent implements AfterViewInit {
         this.sidenav.close();
       }
     }
+  }
+
+  //Switch language
+  translateLanguageTo(lang: string) {
+    this.selectedLang = lang;
+    this.translate.use(lang);
   }
 
   ngAfterViewInit(): void {

@@ -1,0 +1,56 @@
+{
+  "HOME": {
+    "TITLE": "Home",
+
+    "SUMMARY_TITLE": "Summary",
+    "SUMMARY_CONTENT": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+    "SUMMARY_CONTENT_CREATOR": "Creator",
+    "SUMMARY_CONTENT_GENRES": "Genres",
+
+    "STORYLINE_TITLE": "Storyline",
+    "STORYLINE_CONTENT": "When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose. He lives with his teenage son, who has cerebral palsy, and his wife, in New Mexico. Determined to ensure that his family will have a secure future, Walt embarks on a career of drugs and crime. He proves to be remarkably proficient in this new world as he begins manufacturing and selling methamphetamine with one of his former students. The series tracks the impacts of a fatal diagnosis on a regular, hard working man, and explores how a fatal diagnosis affects his morality and transforms him into a major player of the drug trade.",
+
+    "DIDYOUKNOW_TITLE": "Did you know",
+    "DIDYOUKNOW_CONTENT_1": "Jesse Pinkman was originally slated to be written out by the 9th episode. During the hiatus caused by the writers' strike, creator Vince Gilligan, impressed by Aaron Paul's portrayal of Jesse, decided to reinstate the character.",
+    "DIDYOUKNOW_CONTENT_2": "It was Vince Gilligan's decision to finish the show in season 5. He didn't want to make the mistake many successful shows make by running too long until the quality decreases.",
+    "DIDYOUKNOW_CONTENT_3": "When characters on the show are smoking meth, they are actually smoking sugar or rock candy without inhaling. The candy meth is produced by The Candy Lady, a local business in Albuquerque.",
+    "DIDYOUKNOW_CONTENT_4": "Walter was originally written to be 40 years old. AMC felt that 40 was too young for Walter to have a mid-life crisis and requested his age change to 50.",
+    "DIDYOUKNOW_CONTENT_5": "Bryan Cranston has a Breaking Bad tattoo on his ring finger.",
+    "DIDYOUKNOW_CONTENT_6": "In the beginning of each episode, the chemical formula C10H15N along with the number 149.24 and the word \"Meth\" can be seen just before the title Breaking Bad (2008) appears. C10H15N is the formula for methamphetamine, which has the molecular weight of 149.24.",
+
+    "DETAILS_TITLE": "Details",
+    "DETAILS_RELEASE": "Release date: January 20, 2008 (United States)",
+    "DETAILS_ORIGIN": "Country of origin: United States",
+    "DETAILS_OFFICIAL_SITES": "Official sites",
+    "DETAILS_OFFICIAL_SITES_FACEBOOK": "Official Facebook",
+    "DETAILS_OFFICIAL_SITES_INSTAGRAM": "Official Instagram"
+  },
+  "CHARACTERS": {
+    "TITLE": "Characters",
+    "FILTER": "Search character"
+  },
+  "EPISODES": {
+    "TITLE": "Episodes",
+    "FILTER": "Search episode"
+  },
+  "QUOTES": {
+    "TITLE": "Quotes"
+  },
+  "DEATHS": {
+    "TITLE": "Deaths"
+  },
+  "GAMES_SECTION": "Games",
+  "MEMORY_GAME": {
+    "TITLE": "Memory Game",
+    "PLAY": "Play",
+    "STOP": "Stop",
+    "RESTART": "Restart",
+    "TIME": "Time",
+    "DIFFICULTY": "Difficulty",
+    "DIFFICULTY_EASY": "Easy",
+    "DIFFICULTY_MEDIUM": "Medium",
+    "DIFFICULTY_HARD": "Hard",
+    "WINNER_TITLE": "YOU WON!!",
+    "WINNER_CONTENT": "With {{lifes}} lifes and {{timeLeft}} seconds left!"
+  }
+}

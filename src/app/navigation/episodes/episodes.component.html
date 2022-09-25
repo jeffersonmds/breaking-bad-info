@@ -1,8 +1,8 @@
-<app-section-title title="Episodes" icon="fa-solid fa-video"></app-section-title>
+<app-section-title title="{{'EPISODES.TITLE' | translate}}" icon="fa-solid fa-video"></app-section-title>
 
 <div class="textbox">
   <mat-form-field id="textboxFilter" appearance="fill">
-    <mat-label>Search episode</mat-label>
+    <mat-label>{{'EPISODES.FILTER' | translate}}</mat-label>
     <input #inputFilter type="search" matInput (keyup)="debounce.next(inputFilter.value)">
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
