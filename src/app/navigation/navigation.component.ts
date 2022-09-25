@@ -1,7 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { TranslateService } from '@ngx-translate/core';
-import { ScreenService } from '../services/screen.service';
+import { ScreenService } from '../shared/services/screen.service';
 
 @Component({
   selector: 'app-navigation',

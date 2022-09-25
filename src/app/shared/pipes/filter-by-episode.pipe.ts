@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Season } from "src/app/models/season.model";
+import { Season } from "@BreakingBadModels";
 
 @Pipe({ name: "filterByEpisode" })
 export class FilterByEpisode implements PipeTransform{

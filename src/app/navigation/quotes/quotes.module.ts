@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuotesComponent } from './quotes.component';
-import { QuotesService } from 'src/app/services/quotes.service';
 import { QuoteCardComponent } from './quote-card/quote-card.component';
 import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
-import { QuotesGetAllResolver } from 'src/app/resolvers/quotes.resolver';
+import { QuotesGetAllResolver } from '@BreakingBadResolvers';
+import { QuotesService } from '@BreakingBadServices';
 
 const routes: Routes = [
   {

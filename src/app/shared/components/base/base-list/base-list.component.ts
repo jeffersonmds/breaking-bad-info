@@ -1,7 +1,7 @@
 import { Component, Inject, OnDestroy, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Subject } from "rxjs";
-import { BaseService } from "src/app/services/base/base-service";
+import { BaseService } from "src/app/shared/services/base/base-service";
 
 @Component({
   template: ''

@@ -5,8 +5,8 @@ import { Character } from '@BreakingBadModels';
 import { CharactersService } from '@BreakingBadServices';
 import { interval, Subscription } from 'rxjs';
 import { BaseListComponent } from 'src/app/shared/components/base/base-list/base-list.component';
+import { ScreenService } from 'src/app/shared/services/screen.service';
 
-import { ScreenService } from './../../services/screen.service';
 import { GuessCardComponent } from './guess-card/guess-card.component';
 import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
 

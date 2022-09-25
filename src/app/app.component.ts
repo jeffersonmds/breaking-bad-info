@@ -1,8 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ScreenService } from './services/screen.service';
-import { ThemeService } from './services/theme.service';
+import { ScreenService } from './shared/services/screen.service';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',

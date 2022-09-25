@@ -23,9 +23,9 @@
       "dom"
     ],
     "paths": {
-      "@BreakingBadServices": ["src/app/services/export-breaking-bad.services.ts"],
-      "@BreakingBadResolvers": ["src/app/resolvers/export-breaking-bad.resolvers.ts"],
-      "@BreakingBadModels": ["src/app/models/export-breaking-bad.models.ts"]
+      "@BreakingBadServices": ["src/app/shared/services/index.ts"],
+      "@BreakingBadResolvers": ["src/app/shared/resolvers/index.ts"],
+      "@BreakingBadModels": ["src/app/shared/models/index.ts"]
     }
   },
   "angularCompilerOptions": {

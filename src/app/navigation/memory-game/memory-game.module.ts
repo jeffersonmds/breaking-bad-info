@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MemoryGameComponent } from './memory-game.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CharactersGetAllResolver } from 'src/app/resolvers/characters.resolver';
-import { CharactersService } from 'src/app/services/characters.service';
 import { BaseListModule } from 'src/app/shared/components/base/base-list/base-list.module';
 import { GuessCardComponent } from './guess-card/guess-card.component';
 import { WinnerDialogComponent } from './winner-dialog/winner-dialog.component';
+import { CharactersGetAllResolver } from '@BreakingBadResolvers';
+import { CharactersService } from '@BreakingBadServices';
 
 const routes: Routes = [
   {

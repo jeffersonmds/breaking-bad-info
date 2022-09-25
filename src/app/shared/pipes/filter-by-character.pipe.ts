@@ -1,5 +1,5 @@
-import { Character } from './../../models/character.model';
 import { Pipe, PipeTransform } from "@angular/core";
+import { Character } from "@BreakingBadModels";
 
 @Pipe({ name: "filterByCharacter" })
 export class FilterByCharacter implements PipeTransform{
